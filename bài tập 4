@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Bài tập 04 </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    legend {
+      font-weight: bold;
+    }
+    label {
+      display: inline-block;
+      width: 150px;
+      margin-bottom: 5px;
+    }
+    input, select, textarea {
+      margin-bottom: 10px;
+      padding: 4px;
+    }
+    .form-row {
+      margin-bottom: 8px;
+    }
+    .radio-group, .checkbox-group {
+      display: inline-block;
+      margin-left: 10px;
+    }
+    .buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
+    textarea {
+      width: 90%;
+      height: 80px;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>Basic Info</legend>
+      <div class="form-row">
+        <label>Employee ID</label>
+        <input type="text" value="9">
+      </div>
+      <div class="form-row">
+        <label>Last Name</label>
+        <input type="text" value="dodsworth"
+     </div>
+      <div class="form-row">
+        <label>First Name</label>
+        <input type="text" value="anne">
+      </div>
+      <div class="form-row">
+        <label>Gender</label>
+        <span class="radio-group"><input type="radio" name="gender"> Male</span>
+        <span class="radio-group"><input type="radio" name="gender"> Female</span>
+        <span class="radio-group"><input type="radio" name="gender"> XXX</span>
+        <span class="radio-group"><input type="radio" name="gender" checked> ZZZ</span>
+      </div>
+      <div class="form-row">
+        <label>Title</label>
+        <input type="text" value="Sales Representative">
+      </div>
+      <div class="form-row">
+        <label>Suffix</label>
+        <input type="text" value="Ms.">
+      </div>
+      <div class="form-row">
+        <label>BirthDate</label>
+        <input type="date" value="1969-07-02">
+      </div>
+      <div class="form-row">
+        <label>HireDate</label>
+        <input type="date" value="1994-11-15">
+      </div>
+      <div class="form-row">
+        <label>SSN #</label>
+        <input type="text">
+      </div>
+      <div class="form-row">
+        <label>Reports To</label>
+        <select>
+          <option>Buchanan</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Contact Info</legend>
+      <div class="form-row">
+        <label>Email</label>
+        <input type="email" placeholder="name@example.com">
+      </div>
+      <div class="form-row">
+        <label>Address</label>
+        <input type="text" value="7 Houndstooth Rd.">
+      </div>
+      <div class="form-row">
+        <label>City</label>
+        <input type="text" value="London">
+      </div>
+      <div class="form-row">
+        <label>Region</label>
+        <input type="text">
+      </div>
+      <div class="form-row">
+        <label>Postal Code</label>
+        <input type="text" value="WG2 7LT">
+      </div>
+      <div class="form-row">
+        <label>Country</label>
+        <select>
+          <option>Russian Federation</option>
+          <option>United Kingdom</option>
+          <option>USA</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>US Home Phone</label>
+        <input type="tel" value="(234)234-2342">
+      </div>
+      <div class="form-row">
+        <label>Photo</label>
+        <input type="file">
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Optional Info</legend>
+      <div class="form-row">
+        <label>Notes</label><br>
+        <textarea>Anne has a BA degree in English from St. Lawrence College.
+She is fluent in French and German.</textarea>
+      </div>
+      <div class="form-row">
+        <label>Preferred Shift</label>
+        <span class="radio-group"><input type="radio" name="shift" checked> Regular</span>
+        <span class="radio-group"><input type="radio" name="shift"> Gravy Yard</span>
+      </div>
+      <div class="form-row">
+        <label>Active?</label>
+        <input type="checkbox" checked>
+      </div>
+<style>
+  .captcha-text {
+    font-family: monospace;
+    font-size: 24px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    text-align: center;   /* căn giữa */
+    margin: 10px 0;
+  }
+
+  .captcha-row {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* căn giữa ô nhập */
+    margin-top: 5px;
+  }
+
+  .captcha-row input {
+    width: 200px;
+    padding: 5px;
+    margin-right: 10px;
+  }
+
+  .btn-group {
+    text-align: right;
+    margin-top: 15px;
+  }
+
+  .btn {
+    padding: 5px 12px;
+    margin-left: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid #333;
+  }
+
+  .btn-submit {
+    background: #f5f5f5;
+  }
+
+  .btn-cancel {
+    background: #eee;
+  }
+
+  small {
+    display: block;
+    margin-top: 5px;
+    color: red;
+  }
+</style>
+
+<div class="form-group">
+  <label>Are you human?</label>
+</div>
+
+<div class="captcha-text">TIDAWO</div>
+
+<div class="captcha-row">
+  <input type="text">
+  <a href="#">Click to change</a>
+</div>
+
+<div class="btn-group">
+  <button class="btn btn-submit">Submit</button>
+  <button class="btn btn-cancel">Cancel</button>
+</div>
+<small>* required</small>
+</body>
+</html>
