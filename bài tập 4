@@ -1,131 +1,149 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="vi">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
   <title>Basic Info Form</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
-    table {
-      border-collapse: collapse;
-      width: 700px;
-      margin-bottom: 20px;
-    }
-    td {
-      padding: 6px;
-      border: 1px solid #000;
-      vertical-align: top;
-    }
-    .section-title {
-      background-color: #f0f0f0;
-      font-weight: bold;
-      text-align: left;
-    }
-    input[type="text"], input[type="email"], select, textarea {
-      width: 95%;
-      padding: 5px;
-      box-sizing: border-box;
-    }
-    textarea {
-      height: 80px;
-    }
-    .captcha {
-      font-family: monospace;
-      font-size: 22px;
-      text-align: center;
-      letter-spacing: 5px;
-      font-weight: bold;
-      margin: 5px 0;
-    }
-    .buttons {
-      margin-top: 10px;
-    }
-  </style>
 </head>
 <body>
-  <table>
-    <tr><td colspan="2" class="section-title">Basic Info</td></tr>
-    <tr><td>Employee ID</td><td><input type="text" value="9"></td></tr>
-    <tr><td>Last Name</td><td><input type="text" value="Dodsworth"></td></tr>
-    <tr><td>First Name</td><td><input type="text" value="Anne"></td></tr>
-    <tr>
-      <td>Gender</td>
-      <td>
-        <input type="radio" name="gender"> Male
-        <input type="radio" name="gender"> Female
-        <input type="radio" name="gender"> XXX
-        <input type="radio" name="gender" checked> ZZZ
+<form action="#" method="post" enctype="multipart/form-data">
+  <fieldset>
+    <legend>Basic Info</legend>
+    <table cellpadding="4" cellspacing="0">
+      <tr>
+        <td><label for="empid">Employee ID</label></td>
+        <td><input id="empid" name="employee_id" type="text" value="9" /></td>
+      </tr>
+      <tr>
+        <td><label for="lastname">Last Name</label></td>
+        <td><input id="lastname" name="last_name" type="text" value="Dodsworth" /></td>
+      </tr>
+      <tr>
+        <td><label for="firstname">First Name</label></td>
+        <td><input id="firstname" name="first_name" type="text" value="Anne" /></td>
+      </tr>
+      <tr>
+        <td>Gender</td>
+        <td>
+          <label><input type="radio" name="gender" value="male" /> Male</label><br/>
+          <label><input type="radio" name="gender" value="female" /> Female</label><br/>
+          <label><input type="radio" name="gender" value="xxx" /> XXX</label><br/>
+          <label><input type="radio" name="gender" value="zzz" checked /> ZZZ</label>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="title">Title</label></td>
+        <td><input id="title" name="title" type="text" value="Sales Representative" /></td>
+      </tr>
+      <tr>
+        <td><label for="suffix">Suffix</label></td>
+        <td><input id="suffix" name="suffix" type="text" value="Ms." /></td>
+      </tr>
+      <tr>
+        <td><label for="birthdate">BirthDate</label></td>
+        <td><input id="birthdate" name="birthdate" type="date" value="1969-07-02"/></td>
+      </tr>
+      <tr>
+        <td><label for="hiredate">HireDate</label></td>
+        <td><input id="hiredate" name="hiredate" type="date" value="1994-11-15" /></td>
+      </tr>
+      <tr>
+        <td><label for="ssn">SSN # (if applicable)</label></td>
+        <td><input id="ssn" name="ssn" type="text" /></td>
+      </tr>
+      <tr>
+        <td><label for="reports">Reports To</label></td>
+        <td>
+          <select id="reports" name="reports_to">
+            <option>Buchanan</option>
+            <option>King</option>
+            <option>Smith</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend>Contact Info</legend>
+    <table cellpadding="4" cellspacing="0">
+      <tr>
+        <td><label for="email">Email</label></td>
+        <td><input id="email" name="email" type="email" placeholder="name@example.com" /></td>
+      </tr>
+      <tr>
+        <td><label for="address">Address</label></td>
+        <td><input id="address" name="address" type="text" value="7 Houndstooth Rd." /></td>
+      </tr>
+      <tr>
+        <td><label for="city">City</label></td>
+        <td><input id="city" name="city" type="text" value="London" /></td>
+      </tr>
+      <tr>
+        <td><label for="region">Region</label></td>
+        <td><input id="region" name="region" type="text" /></td>
+      </tr>
+      <tr>
+        <td><label for="postal">Postal Code</label></td>
+        <td><input id="postal" name="postal_code" type="text" value="WG2 7LT" /></td>
+      </tr>
+      <tr>
+        <td><label for="country">Country</label></td>
+        <td>
+          <select id="country" name="country">
+            <option>United Kingdom</option>
+            <option>Russian Federation</option>
+            <option selected>London (example)</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="phone">US Home Phone</label></td>
+        <td><input id="phone" name="phone" type="tel" value="(234)234-2342" /></td>
+      </tr>
+      <tr>
+        <td><label for="photo">Photo</label></td>
+        <td><input id="photo" name="photo" type="file" accept="image/*" /></td>
+      </tr>
+    </table>
+  </fieldset>
+  <fieldset>
+    <legend>Optional Info</legend>
+    <table cellpadding="4" cellspacing="0">
+      <tr>
+        <td valign="top"><label for="notes">Notes</label></td>
+        <td>
+          <textarea id="notes" name="notes" rows="6" cols="50">
+Anne has a BA degree English from St. Lawrence Colloge.
+She is fluent in French and German.ZZZ
+          </textarea>
       </td>
-    </tr>
-    <tr><td>Title</td><td><input type="text" value="Sales Representative"></td></tr>
-    <tr><td>Suffix</td><td><input type="text" value="Ms."></td></tr>
-    <tr><td>BirthDate</td><td><input type="text" value="1969-07-02 00:00:00"></td></tr>
-    <tr><td>HireDate</td><td><input type="text" value="1994-11-15 00:00:00"></td></tr>
-    <tr><td>SSN (# if applicable)</td><td><input type="text"></td></tr>
-    <tr>
-      <td>Reports To</td>
+      </tr>
+      <tr>
+         <td>Preferred Shift</td>
       <td>
-        <select>
-          <option>Buchanan</option>
-        </select>
+          <label><input type="checkbox" name="shift_regular" /> Regular</label><br/>
+          <label><input type="checkbox" name="shift_gravy" checked /> Gravy Yard</label>
       </td>
-    </tr>
-  </table>
-  <table>
-    <tr><td colspan="2" class="section-title">Contact Info</td></tr>
-    <tr><td>Email</td><td><input type="email" placeholder="name@example.com"></td></tr>
-    <tr><td>Address</td><td><input type="text" value="7 Houndstooth Rd."></td></tr>
-    <tr><td>City</td><td><input type="text" value="London"></td></tr>
-    <tr><td>Region</td><td><input type="text"></td></tr>
-    <tr><td>Postal Code</td><td><input type="text" value="WG2 7LT"></td></tr>
-    <tr>
-      <td>Country</td>
-      <td>
-        <select>
-          <option>Russian Federation</option>
-        </select>
-      </td>
-    </tr>
-    <tr><td>US Home Phone</td><td><input type="text" value="(234)234-2342"></td></tr>
-    <tr><td>Photo</td><td><input type="text" value="EmpID9.bmp"></td></tr>
-  </table>
+      </tr>
+      <tr>
+        <td><label for="active">Active?</label></td>
+        <td><input id="active" name="active" type="checkbox" checked /></td>
+      </tr>
+      <tr>
+        <td>Are you human?</td>
 
-  <!-- Optional Info -->
-  <table>
-    <tr><td colspan="2" class="section-title">Optional Info</td></tr>
-    <tr>
-      <td>Notes</td>
       <td>
-        <textarea>Anne has a BA degree in English from St. Lawrence College. 
-She is fluent in French and German.ZZZ</textarea>
-      </td>
-    </tr>
-    <tr>
-      <td>Preferred Shift</td>
-      <td>
-        <input type="radio" name="shift" checked> Regular
-        <input type="radio" name="shift"> Gravy Yard
-      </td>
-    </tr>
-    <tr>
-      <td>Active?</td>
-      <td><input type="checkbox" checked></td>
-    </tr>
-    <tr>
-      <td>Are you human?</td>
-      <td>
-        <div class="captcha">TIDAWO</div>
-        <input type="text" placeholder="Enter text">
-        <div>Click to change</div>
-      </td>
-    </tr>
-  </table>
-  <div class="buttons">
+          <div>T I D A W O</div>
+          <input type="text" name="captcha" placeholder="Enter code shown" />
+          <div><small><a href="#">Click to change</a></small></div>
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+  <p>
     <button type="submit">Submit</button>
-    <button type="reset">Cancel</button>
-  </div>
-<small>* required</small>
+    <button type="button" onclick="history.back();">Cancel</button>
+  </p>
+  <p><small>* required</small></p>
+</form>
 </body>
 </html>
